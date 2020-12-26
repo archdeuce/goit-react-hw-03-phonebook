@@ -1,0 +1,17 @@
+.ContactList__container {
+  background-color: wheat;
+  width: 500px;
+  padding-bottom: 20px;
+}
+
+.ContactList__list {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-size: 18px;
+  font-weight: bold;
+  color: #282c34;
+}
+
+.ContactList__delete-button {
+  margin-left: 20px;
+}

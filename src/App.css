@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+h1,
+h2 {
+  text-align: center;
+  background-color: tomato;
+  color: #282c34;
+  width: 500px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}

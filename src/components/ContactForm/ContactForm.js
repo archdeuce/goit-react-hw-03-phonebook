@@ -17,10 +17,19 @@ class ContactForm extends Component {
   submitHandler = e => {
     e.preventDefault();
     const { name, number } = this.state;
+
+    if (name === '' || number === '') {
+      alert('You need to specify the name and phone number.');
+      return;
+    }
+
     this.props.onCreate({ id: shortid.generate(), name, number });
+    this.setState({ name: '', number: '' });
   };
 
   render() {
+    const { name, number } = this.state;
+
     return (
       <>
         <form
@@ -36,6 +45,8 @@ class ContactForm extends Component {
             id="nameId"
             name="name"
             type="text"
+            autoComplete="off"
+            value={name}
             onChange={this.changeHandler}
           ></input>
           <label className="ContactForm__label" htmlFor="telId">
@@ -46,6 +57,8 @@ class ContactForm extends Component {
             id="telId"
             name="number"
             type="tel"
+            autoComplete="off"
+            value={number}
             onChange={this.changeHandler}
           ></input>
           <button className="ContactForm__button" type="submit">
